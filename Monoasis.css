@@ -286,3 +286,8 @@ a[data-tracking="discuss"] {
 #WikiaFooter {
   display: none !important;
 }
+
+/* Color visited links */
+a:visited {
+  color: #003180;
+}
