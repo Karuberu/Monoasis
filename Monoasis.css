@@ -1,0 +1,293 @@
+/* Full width */
+#WikiaRailWrapper,
+.WikiaRail {
+  display: none;
+}
+
+.WikiaPage {
+  width: initial;
+  margin: 0 5% 1em 5%;
+}
+
+.WikiaMainContent,
+.wds-community-header {
+  width: initial;
+}
+
+.ArticlePreviewInner {
+  width: initial !important;
+}
+
+body {
+  padding: 0 !important;
+  color: black;
+}
+
+#WikiaPage {
+  padding-bottom: 1em;
+}
+
+/* White, opaque background */
+#WikiaPageBackground {
+  background: #F6F6F6 !important;
+}
+
+.wds-community-header,
+.wds-community-header::before {
+  /* background: transparent; */
+}
+
+#WikiaPageBackground {
+  opacity: initial !important;
+}
+
+body,
+body::before,
+body::after {
+  background: #eee !important;
+}
+
+.background-image-gradient {
+  display: none;
+}
+
+/* No floating navigation bar */
+#globalNavigation {
+  position: absolute;
+}
+
+/* Separate header from article */
+#WikiaPage {
+  padding-top: 1em;
+  margin-top: 1em;
+  border-top: 1px solid #ccc;
+}
+
+/* Monobook-style headings */
+.WikiaPage h1,
+.WikiaPage h2,
+.WikiaPage h3,
+.WikiaPage h4,
+.WikiaPage h5,
+.WikiaPage h6,
+.WikiaPage h1.page-header__title {
+  color: black;
+  font-weight: normal;
+  margin: 0;
+  overflow: hidden;
+}
+
+.WikiaPage h1,
+.WikiaPage h1.page-header__title {
+  font-size: 1.8em;
+}
+
+.WikiaPage h2 {
+  font-size: 1.5em;
+}
+
+.WikiaPage h3 {
+  font-size: 1.2em;
+}
+
+h3 .mw-headline {
+  font-weight: bold;
+}
+
+.WikiaPage h1,
+.WikiaPage h2 {
+  font-family: "Linux Libertine","Georgia","Times",serif;
+  padding: 0px;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.WikiaPage h3,
+.WikiaPage h4,
+.WikiaPage h5,
+.WikiaPage h6 {
+  line-height: 1.6em;
+  margin-top: 0.3em;
+  padding-bottom: 0;
+}
+
+#PageHeader {
+  padding: 0.5em 0;
+}
+
+.WikiaPage .page-header__main {
+  margin-bottom: -0.5em;
+}
+
+.WikiaPage h1.page-header__title {
+  margin-top: 0;
+}
+
+.WikiaPage .page-header__subtitle {
+  font-size: 0.75em;
+  margin: 0;
+}
+
+.WikiaPage .page-header__separator {
+  margin-bottom: 0.5em;
+}
+
+/* Remove categories under page title */
+.WikiaPage .page-header__categories {
+  display: none;
+}
+
+/* Remove the page subtitle */
+.page-header__page-subtitle {
+  display: none;
+}
+
+/* Monobook-style text */
+html, body {
+  font-family: sans-serif !important;
+  font-size: 100% !important;
+}
+
+.WikiaArticle {
+  font-size: 14px !important;
+  color: #222 !important;
+  line-height: 1.6em !important;
+}
+
+.WikiaArticle pre {
+  line-height: 1.1em;
+  font-size: 14px;
+}
+
+.WikiaArticle pre span {
+  color: black !important;
+  font-weight: initial !important;
+}
+
+/* Monobook-style lists */
+.WikiaArticle ul {
+  margin: 0.3em 0px 0px 1.6em;
+}
+
+.WikiaArticle dl {
+  margin: 0.2em 0 0 0.5em;
+}
+
+.WikiaArticle dd {
+  margin: 0 0 0 1.6em;
+}
+
+/* Monobook-style edit section */
+.sprite.edit-pencil {
+  display: none;
+}
+
+.editsection {
+  float: right !important;
+  font-family: sans-serif;
+  margin-right: 0.5em;
+  text-transform: lowercase;
+}
+
+.editsection::before {
+  content: '['
+}
+
+.editsection::after {
+  content: ']'
+}
+
+/* Adjust categories margins */
+.article-categories {
+  margin: 1em 0;
+  padding: 0.3em;
+}
+
+/* Monobook-style edit page links */
+.WikiaPage .page-header .wds-button svg,
+.page-header__contribution-buttons .wds-dropdown__toggle,
+.page-header__contribution-buttons .wds-dropdown::before,
+.page-header__contribution-buttons .wds-dropdown::after {
+  display: none;
+}
+
+.WikiaPage .page-header .wds-button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.WikiaPage .page-header .wds-button span {
+  font-size: initial;
+  font-weight: initial;
+  font-style: initial;
+  text-transform: initial;
+  line-height: initial;
+  letter-spacing: initial;
+}
+
+.WikiaPage .page-header .wds-button:hover:not(:disabled) {
+  background: transparent;
+}
+
+.WikiaPage .page-header .wds-button:hover:not(:disabled) > span {
+  color: #0148C2;
+}
+
+.page-header__contribution-buttons .wds-dropdown__content,
+.page-header .wds-dropdown__content .wds-list.wds-is-linked > li > a {
+  display: initial;
+  position: initial;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.page-header__contribution-buttons .wds-dropdown__content li,
+.page-header__contribution-buttons .wds-dropdown__content li a {
+  display: inline;
+}
+
+.WikiaPage .page-header__contribution-buttons .wds-dropdown__content .wds-list.wds-is-linked li:hover > a {
+  background: transparent;
+}
+
+/* Remove language links */
+.WikiaArticleInterlang,
+.wds-dropdown.page-header__languages {
+  display: none;
+}
+
+/* Remove category gallery */
+.category-gallery {
+  display: none;
+}
+
+/* Remove share button */
+#ShareEntryPoint {
+  display: none;
+}
+
+/* Remove discuss button */
+a[data-tracking="discuss"] {
+  display: none;
+}
+
+/* Remove bottom bar */
+#WikiaBar {
+  display: none;
+}
+
+/* Remove print footer */
+.printfooter {
+  display: none;
+}
+
+/* Remove ads */
+#WikiaTopAds,
+#top-right-boxad-wrapper,
+#WikiaFooter {
+  display: none !important;
+}
