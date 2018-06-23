@@ -328,6 +328,11 @@ a[data-tracking="discuss"] {
   display: none !important;
 }
 
+/* Remove user profile box */
+#UserProfileMasthead {
+  display: none;
+}
+
 /* Color visited links */
 a:visited {
   color: #003180;
