@@ -106,6 +106,12 @@ h3 .mw-headline {
   padding-bottom: 0;
 }
 
+.WikiaPage #toctitle h2 {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
 #PageHeader {
   padding: 0.5em 0;
 }
