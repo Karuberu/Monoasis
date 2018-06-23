@@ -54,7 +54,7 @@ body::after {
 /* Separate header from article */
 #WikiaPage {
   padding-top: 1em;
-  margin-top: 1em;
+  margin-top: 2em;
   border-top: 1px solid #ccc;
 }
 
@@ -121,6 +121,9 @@ h3 .mw-headline {
 .WikiaPage .page-header__subtitle {
   font-size: 0.75em;
   margin: 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 
 .WikiaPage .page-header__separator {
@@ -198,7 +201,7 @@ html, body {
   padding: 0.3em;
 }
 
-/* Monobook-style edit page links */
+/* Monobook-style contribution buttons */
 .WikiaPage .page-header .wds-button svg,
 .page-header__contribution-buttons .wds-dropdown__toggle,
 .page-header__contribution-buttons .wds-dropdown::before,
@@ -206,15 +209,21 @@ html, body {
   display: none;
 }
 
+.page-header__contribution-buttons .wds-button-group {
+  display: inline;
+}
+
 .WikiaPage .page-header .wds-button {
   border: none;
   margin: 0;
   padding: 0;
   background: transparent;
+  display: inherit;
+  min-height: initial;
+  vertical-align: baseline;
 }
 
 .WikiaPage .page-header .wds-button span {
-  font-size: initial;
   font-weight: initial;
   font-style: initial;
   text-transform: initial;
@@ -231,6 +240,7 @@ html, body {
 }
 
 .page-header__contribution-buttons .wds-dropdown__content,
+.page-header__contribution-buttons .wds-dropdown:hover .wds-dropdown__content,
 .page-header .wds-dropdown__content .wds-list.wds-is-linked > li > a {
   display: initial;
   position: initial;
@@ -240,11 +250,36 @@ html, body {
   background: transparent;
 }
 
+.WikiaPage .page-header__contribution {
+  position: absolute;
+  margin: 0;
+  width: 100%;
+  display: inline;
+  bottom: 3.75em;
+  left: -2em;
+}
+
+.page-header__contribution-buttons .wds-dropdown__content .wds-list.wds-is-linked > li,
+.WikiaPage .page-header .wds-button span {
+  background: #F6F6F6;
+  padding: 0.2em 0.6em;
+  margin: 0 0.2em;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.WikiaPage .page-header .wds-button span {
+  margin-left: -1px;
+  margin-right: 0;
+}
+
 .page-header__contribution-buttons .wds-dropdown__content li,
 .page-header__contribution-buttons .wds-dropdown__content li a {
   display: inline;
+  margin: 0;
 }
 
+.WikiaPage .page-header__contribution-buttons .wds-dropdown__content:hover,
 .WikiaPage .page-header__contribution-buttons .wds-dropdown__content .wds-list.wds-is-linked li:hover > a {
   background: transparent;
 }
