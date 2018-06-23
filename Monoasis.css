@@ -24,7 +24,7 @@ body {
 }
 
 #WikiaPage {
-  padding-bottom: 1em;
+  padding: 2em;
 }
 
 /* White, opaque background */
@@ -194,7 +194,7 @@ html, body {
 
 /* Adjust categories margins */
 .article-categories {
-  margin: 1em 0;
+  margin: 1em 0 0 0;
   padding: 0.3em;
 }
 
