@@ -1,0 +1,60 @@
+/* Item page sections and headers */
+.item-header {
+  margin-top: 0;
+}
+
+.showhide {
+  float: right;
+  cursor: pointer;
+  font-size: 13px !important;
+  font-weight: normal !important;
+  font-family: sans-serif;
+  margin-right: 0.5em;
+}
+
+.showhide::before {
+  content: '['
+}
+
+.showhide::after {
+  content: ']'
+}
+
+.item-section .item-header,
+.item-subsection .item-header {
+  margin-right: 0.5em;
+}
+
+.item-section {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+}
+
+.item-subsection {
+  vertical-align: top;
+  display: inline-block;
+  width: 50%;
+}
+
+/* Fix overflow issues on small screens */
+@media screen and (max-width: 1024px) {
+  .item-subsection {
+    width: 100%;
+  }
+}
+
+/* Adaptively-sized table */
+table.wide-table {
+  width: 60%;
+}
+@media screen and (max-width: 1600px) {
+  table.wide-table {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  table.wide-table {
+    width: 100%;
+  }
+}
