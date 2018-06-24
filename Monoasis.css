@@ -7,6 +7,8 @@
 .WikiaPage {
   width: initial;
   margin: 0 5% 1em 5%;
+  border: 1px solid #ccc;
+  z-index: 1;
 }
 
 .WikiaMainContent,
@@ -28,6 +30,7 @@ body {
 }
 
 /* White, opaque background */
+.WikiaPage,
 #WikiaPageBackground {
   background: #F6F6F6 !important;
 }
@@ -336,4 +339,186 @@ a[data-tracking="discuss"] {
 /* Color visited links */
 a:visited {
   color: #003180;
+}
+
+/* Fix edit page */
+.EditPage {
+  background: initial;
+  margin-top: 0.5em;
+  border: 1px solid #ccc;
+}
+
+.EditPageHeader {
+  height: initial;
+  padding-left: 0;
+  background: #F6F6F6;
+  box-shadow: none;
+}
+
+.EditPageHeader > .wordmark {
+  display: none;
+}
+
+.EditPageHeader h1,
+.EditPageHeader h2 {
+  float: none;
+  display: inline;
+  vertical-align: middle;
+  line-height: 1.5em;
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.EditPageHeader aside {
+  display: none;
+}
+
+#EditPage.toolbar-expanded .EditPageToolbar {
+  height: initial;
+}
+
+.EditPageToolbar,
+.editpage-sourcewidemode.mode-source.editpage-sourcewidemode-on .EditPageToolbar {
+  padding: 0;
+  background: #e0e0e0;
+}
+
+.EditPageToolbar > .cke_toolbar_source {
+  padding: 0 0.2em 0.2em 0.5em;
+}
+
+.EditPageEditorWrapper {
+  padding: 0;
+}
+
+.EditPageEditor.noFooter {
+  margin: 0;
+}
+
+.EditPageEditor.noFooter .editpage-editarea {
+  border: none;
+}
+
+.editpage-widemode-trigger {
+  background: #e0e0e0;
+}
+
+.EditPageRail {
+  box-shadow: none;
+}
+
+/* Move page controls to bottom */
+.editpage-sourcewidemode.mode-source.editpage-sourcewidemode-on {
+  display: flex;
+  flex-direction: column;
+}
+
+.editpage-sourcewidemode.mode-source.editpage-sourcewidemode-on .EditPageRail {
+  order: 2;
+  position: initial;
+  height: auto !important;
+  padding: 0.5em;
+  background: #e0e0e0;
+  border-top: 1px solid #ccc;
+}
+
+.editpage-sourcewidemode.mode-source.editpage-sourcewidemode-on .EditPageRail .module_page_controls .module_content {
+  padding: 0;
+}
+
+.EditPage .module_page_controls .checkboxes > label,
+.editpage-sourcewidemode.mode-source.editpage-sourcewidemode-on .EditPageRail .module_page_controls .module_content .preview_box h3,
+#EditPage.toolbar-expanded .diff-link,
+#EditPage.toolbar-expanded #wpSave {
+  font-size: 0.8em;
+}
+
+#EditPage.toolbar-expanded .preview-header,
+.editpage-sourcewidemode.mode-source.editpage-sourcewidemode-on .EditPageRail .module_page_controls .module_content .preview_box h3,
+.editpage-sourcewidemode.mode-source.editpage-sourcewidemode-on .EditPageRail .module_page_controls .module_content .preview_box,
+.editpage-sourcewidemode.mode-source.editpage-sourcewidemode-on .EditPageRail .module_page_controls .module_content .buttons,
+.editpage-sourcewidemode.mode-source.editpage-sourcewidemode-on .EditPageRail .module_page_controls .module_content .wpSummaryFields,
+.editpage-sourcewidemode.mode-source.editpage-sourcewidemode-on .EditPageRail .module_page_controls .module_content .checkboxes,
+.editpage-sourcewidemode.mode-source.editpage-sourcewidemode-on .EditPageRail .module_page_controls .module_content .checkboxes span,
+.editpage-sourcewidemode.mode-source.editpage-sourcewidemode-on .EditPageRail .module_page_controls .module_content .checkboxes label:only-child,
+.editpage-sourcewidemode.mode-source.editpage-sourcewidemode-on .EditPageRail .module_page_controls .module_content .checkboxes label:only-child input {
+  float: none;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.editpage-sourcewidemode.mode-source.editpage-sourcewidemode-on .EditPageRail .module_page_controls .module_content #wpSummary {
+  width: 30em;
+  height: initial;
+  margin: 0;
+  padding: 0.5em;
+  border-radius: 0;
+}
+
+.editpage-sourcewidemode.mode-source.editpage-sourcewidemode-on .EditPageRail .module_page_controls .module_content .checkboxes {
+  margin: 0.3em;
+}
+
+.editpage-sourcewidemode.mode-source.editpage-sourcewidemode-on .EditPageRail .module_page_controls .module_content .checkboxes span {
+  width: initial;
+  line-height: 1.5em;
+  color: initial;
+}
+
+.EditPage .module_page_controls .checkboxes > label input {
+  height: 1.5em;
+  margin: 0;
+}
+
+.editpage-sourcewidemode.mode-source.editpage-sourcewidemode-on .EditPageRail .module_page_controls .module_content .preview_box {
+  height: auto;
+  padding: 0;
+}
+
+#EditPage.toolbar-expanded .preview_mobile,
+#EditPage.toolbar-expanded .preview_desktop,
+.editpage-sourcewidemode.mode-source.editpage-sourcewidemode-on .EditPageRail .module_page_controls .module_content .preview_box .preview_mobile,
+.editpage-sourcewidemode.mode-source.editpage-sourcewidemode-on .EditPageRail .module_page_controls .module_content .preview_box .preview_desktop {
+  float: none;
+  display: inline-block;
+  vertical-align: bottom;
+  padding: 0;
+  margin: 0 0.2em;
+}
+
+.editpage-sourcewidemode.mode-source.editpage-sourcewidemode-on .EditPageRail .module_page_controls .module_content .preview_box .preview_mobile svg,
+.editpage-sourcewidemode.mode-source.editpage-sourcewidemode-on .EditPageRail .module_page_controls .module_content .preview_box .preview_desktop svg {
+  display: inline-block;
+  height: 1em;
+}
+
+#EditPage.toolbar-expanded .diff-link,
+.editpage-sourcewidemode.mode-source.editpage-sourcewidemode-on .EditPageRail .module_page_controls .module_content .diff-link {
+  display: inline-block;
+  vertical-align: bottom;
+  width: initial;
+  line-height: 1.5em;
+  margin: 0 0.5em;
+}
+
+#EditPage.toolbar-expanded #wpSave,
+.editpage-sourcewidemode.mode-source.editpage-sourcewidemode-on .module_page_controls .control-button {
+  background: none;
+  border: none;
+  width: initial;
+  height: initial !important;
+  line-height: 1.5em;
+  margin: 0 0.2em;
+  padding: 0;
+}
+
+/* Prevent dynamic resizing of editor */
+#editarea textarea {
+  height: auto !important;
+}
+
+/* Hide edit toolbar */
+.EditPageToolbar {
+  display: none;
 }
