@@ -16,10 +16,6 @@
   width: 100%;
 }
 
-.ArticlePreviewInner {
-  width: initial !important;
-}
-
 body {
   padding: 0 !important;
   color: black;
@@ -77,7 +73,13 @@ body {
 .WikiaPage h4,
 .WikiaPage h5,
 .WikiaPage h6,
-.WikiaPage h1.page-header__title {
+.WikiaPage h1.page-header__title,
+.ArticlePreviewInner h1,
+.ArticlePreviewInner h2,
+.ArticlePreviewInner h3,
+.ArticlePreviewInner h4,
+.ArticlePreviewInner h5,
+.ArticlePreviewInner h6 {
   color: black;
   font-weight: normal;
   margin: 0;
@@ -85,15 +87,18 @@ body {
 }
 
 .WikiaPage h1,
-.WikiaPage h1.page-header__title {
+.WikiaPage h1.page-header__title,
+.ArticlePreviewInner h1.pagetitle {
   font-size: 1.8em;
 }
 
-.WikiaPage h2 {
+.WikiaPage h2,
+.ArticlePreview h2 {
   font-size: 1.5em;
 }
 
-.WikiaPage h3 {
+.WikiaPage h3,
+.ArticlePreview h3 {
   font-size: 1.2em;
 }
 
@@ -102,7 +107,9 @@ h3 .mw-headline {
 }
 
 .WikiaPage h1,
-.WikiaPage h2 {
+.WikiaPage h2,
+.ArticlePreviewInner h1,
+.ArticlePreviewInner h2 {
   line-height: 1.3em;
   font-family: "Linux Libertine","Georgia","Times",serif;
   padding: 0px;
@@ -113,10 +120,19 @@ h3 .mw-headline {
 .WikiaPage h3,
 .WikiaPage h4,
 .WikiaPage h5,
-.WikiaPage h6 {
+.WikiaPage h6,
+.ArticlePreviewInner h3,
+.ArticlePreviewInner h4,
+.ArticlePreviewInner h5,
+.ArticlePreviewInner h6 {
   line-height: 1.6em;
   margin-top: 0.3em;
   padding-bottom: 0;
+}
+
+.ArticlePreviewInner h1.pagetitle {
+  margin-top: 0;
+  border-bottom: 1px solid #ccc;
 }
 
 .WikiaPage #toctitle h2 {
@@ -534,4 +550,57 @@ a:visited {
 /* Hide edit toolbar */
 .EditPageToolbar {
   display: none;
+}
+
+/* Show preview above editor */
+.blackout {
+  display: none !important;
+}
+
+body.mediawiki.modalShown {
+  display: flex;
+  flex-direction: column;
+}
+
+body.mediawiki.modalShown .WikiaSiteWrapper {
+  order: 2;
+}
+
+body.mediawiki.modalShown .WikiaPage {
+  margin-top: 0;
+}
+
+#EditPageDialog.preview {
+  width: initial !important;
+  position: relative;
+  top: 55px !important;
+  left: 0 !important;
+  box-shadow: none;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  margin: 1em 5% 0 5% !important;
+  order: 1;
+}
+
+#EditPageDialog.preview .modalContent {
+  margin: 0;
+}
+
+#EditPageDialog.preview .modalContent .ArticlePreview {
+  border: none;
+  border-top: 1px solid #ccc;
+  padding: 2em;
+}
+
+#EditPageDialog.preview .modalContent .ArticlePreviewInner {
+  width: initial !important;
+}
+
+#EditPageDialog.preview .modalContent .modalToolbar {
+  display: none;
+}
+
+/* Full height preview */
+#EditPageDialog.preview .modalContent .ArticlePreview {
+  height: initial !important;
 }
