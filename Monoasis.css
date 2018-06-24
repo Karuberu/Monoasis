@@ -49,6 +49,11 @@ body::after {
   display: none;
 }
 
+/* Always allow scrolling */
+body {
+  overflow-y: initial !important;
+}
+
 /* No floating navigation bar */
 #globalNavigation {
   position: absolute;
